@@ -1,0 +1,43 @@
+<?php $__env->startSection('title'); ?> 用户注册 @parent  <?php $__env->stopSection(); ?>
+<?php $__env->startSection('style'); ?>
+    @parent
+<?php echo HTML::style('css/register.css'); ?>
+    <?php $__env->stopSection(); ?>
+<?php $__env->startSection('body'); ?>
+<div class='signup_container'>
+
+
+ 	<h1 class='signup_title'>用户注册</h1>
+    <?php echo HTML::image('images/people.png'); ?>
+    <div id="signup_forms" class="signup_forms clearfix">
+            <?php echo Form::open(array('route'=>'sign','id'=>'user_signup')); ?>
+            <?php echo Form::token(); ?>
+            <div class="form_row first_row">
+                        <?php echo Form::label('name','用户名'); ?>
+                        <?php echo Form::text('name','',array("placeholder"=>"请输入用户名","required"=>"required")); ?>
+             </div>
+            <div class="form_row">
+				<?php echo Form::password('password',array("placeholder"=>"请输入密码","required"=>"required")); ?>
+        	</div>
+        	<div class="form_row"><?php echo Form::password('password_confirmation',array("placeholder"=>"确认密码","required"=>"required")); ?></div>
+        <?php echo Form::submit('注册       '); ?>
+            <?php echo Form::close(); ?>
+    </div>
+     <div class="alert alert-warning alert-dismissable <?php echo $errors->first('name')?'':'hidden';; ?><?php echo $errors->first('password')?'':'hidden';; ?>">
+            <font color="red"><strong>
+            <?php echo $errors->first('name', '<strong class="error">:message</strong>'); ?>
+            <?php echo $errors->first('password', '<strong class="error">:message</strong>'); ?>
+        </strong></font>
+      </div>
+      <div class="alert alert-warning alert-dismissable <?php echo $errors->first('attempt')?'':'hidden';; ?>">
+            <font color="red"><strong><?php echo $errors->first('attempt'); ?></strong></font>
+        </div>
+         <?php echo link_to_route('getsignin', '返回登录页面'); ?>
+    
+    <strong><p class='copyright'>天津新世纪儿童医院</p></strong>
+</div>
+<?php $__env->stopSection(); ?>
+
+
+
+<?php echo $__env->make('login.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

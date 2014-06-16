@@ -1,0 +1,21 @@
+<html>
+<title>
+  <?php $__env->startSection('title'); ?>
+  <?php echo $__env->yieldSection(); ?><?php /* 页面标题 */ ?>  
+</title>
+	<head>
+    	<meta charset="UTF-8">
+        <?php echo HTML::style('js/easyui/themes/default/easyui.css'); ?>
+        <?php echo HTML::style('js/easyui/themes/icon.css'); ?>
+        <?php echo HTML::script('js/easyui/jquery.min.js'); ?>
+        <?php echo HTML::script('js/easyui/jquery.easyui.min.js'); ?>
+	</head>
+    <body>
+        <?php $__env->startSection('user'); ?>
+        <?php echo $__env->yieldSection(); ?><?php /* 页面标题 */ ?>
+    	
+       	<?php echo $__env->yieldContent('grid'); ?>
+
+
+    </body>
+</html>

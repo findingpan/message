@@ -1,0 +1,33 @@
+<?php $__env->startSection('title'); ?> 用户登录 @parent  <?php $__env->stopSection(); ?>
+<?php $__env->startSection('style'); ?>
+    @parent
+<?php echo HTML::style('css/register.css'); ?>
+    <?php $__env->stopSection(); ?>
+<?php $__env->startSection('body'); ?>
+<div class='signup_container'>
+
+    <h1 class='signup_title'>用户登陆</h1>
+    <?php echo HTML::image('images/people.png'); ?>
+    <div id="signup_forms" class="signup_forms clearfix">
+            <?php echo Form::open(array('route'=>'postsignin','id'=>'user_login')); ?>
+            <?php echo Form::token(); ?>
+            <div class="form_row first_row">
+                        <?php echo Form::label('user','用户名'); ?>
+                        <?php echo Form::text('user','',array("placeholder"=>"请输入用户名","required"=>"required")); ?>
+                    </div>
+                    <div class="form_row">
+                        <?php echo Form::label('password','登录密码'); ?>
+                        <?php echo Form::password('password',array("placeholder"=>"请输入密码")); ?>
+                    </div>
+           <?php echo Form::submit('登录       '); ?>
+            <?php echo Form::close(); ?>
+    </div>
+    <?php echo link_to_route('getsign', '点击注册'); ?>
+     <div class="alert alert-warning alert-dismissable <?php echo $errors->first('attempt')?'':'hidden';; ?>">
+            <font color="red"><strong><?php echo $errors->first('attempt'); ?></strong></font>
+        </div>
+    
+    <p class='copyright'>天津新世纪儿童医院</p>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('login.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
