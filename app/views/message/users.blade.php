@@ -1,16 +1,16 @@
-@extends('message.base')
+@extends('index')
 @section('title')
 @parent
 短信
 @stop
 
-@section('user')
-@parent
+
+@section('body')
+	    {{HTML::style('js/easyui/themes/default/easyui.css')}}
+        {{HTML::style('js/easyui/themes/icon.css')}}
+        {{HTML::script('js/easyui/jquery.min.js')}}
+        {{HTML::script('js/easyui/jquery.easyui.min.js')}}
 	<div>你好!{{Auth::user()->name}},{{HTML::linkRoute('logout', '登出')}}</div>
-@stop
-
-@section('grid')
-
 	<div style="margin:20px 0;">
 		{{ Form::button('获取联系人',['class'=>'easyui-linkbutton','onclick'=>'getSelections()']) }}
 		{{ Form::button('添加联系人',['class'=>'easyui-linkbutton','onclick'=>'addSelections()']) }}
@@ -106,11 +106,11 @@
 			        url: "surplus",  
 			        success: function(data){
 							$.messager.show({
-											title:'查询余额',
-											msg:data,
-											timeout:5000,
-											showType:'slide'
-										});		            
+								title:'查询余额',
+								msg:data,
+								timeout:5000,
+								showType:'slide'
+							});		            
 			        }
 			    });
 
@@ -122,7 +122,3 @@
 
 @stop
 
-
-@section('name_1')
-	{{Form::text('name','',['class'=>'easyui-validatebox textbox','data-options'=>'required:true'])}}
-@stop

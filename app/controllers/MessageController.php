@@ -1,6 +1,6 @@
 <?php
 
-class MessageController extends BaseController {
+class MessageController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------

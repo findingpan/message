@@ -1,6 +1,6 @@
 <?php
 
-class AuthorityController extends BaseController
+class AuthorityController extends Controller
 {
     /**
      * @return Response
@@ -20,6 +20,7 @@ class AuthorityController extends BaseController
         // 验证登录
         if (Auth::attempt($credentials)) {
             // 登录成功
+            //return View::make('message.users');
             return View::make('message.users');
         } else {
             // 登录失败，跳回

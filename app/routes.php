@@ -13,6 +13,9 @@
 
 	# 登录
 	Route::get( '/', array('as' => 'getsignin' , 'uses' => 'AuthorityController@getSignin'));
+	Route::get('message', function(){
+		return View::make('message.users');
+	});
 	Route::post( '/', array('as' => 'postsignin' ,'uses' =>'AuthorityController@postSignin'));
 	#注册页面
 	Route::get( 'signup', array('as' => 'getsign' , 'uses' => 'AuthorityController@getSignup'));
@@ -27,3 +30,12 @@
 	Route::get('list','MessageController@contentList');
 
 	Route::post('messageToMany','MessageController@messageTo');
+
+	# 问题列表
+	Route::get( 'info', array('uses' => 'InfoResource@index'));
+	#添加问题
+	Route::post('addproblem', array('as' => 'addproblem' ,'uses' =>'InfoController@addproblem'));
+	#添加反馈
+	Route::get('editsolve/{id}', array('as' => 'editsolve' ,'uses' =>'InfoController@editsolve'));
+	#更新问题状态
+	Route::get('updatestate/{id}/{state}', array('as' => 'updatestate' ,'uses' =>'InfoController@updatestate'));
