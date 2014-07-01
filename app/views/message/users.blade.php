@@ -4,13 +4,11 @@
 短信
 @stop
 
+@section('d')
+	      <li class="active">{{HTML::link('message','短信发送')}}</li>
+@stop
 
 @section('body')
-	    {{HTML::style('js/easyui/themes/default/easyui.css')}}
-        {{HTML::style('js/easyui/themes/icon.css')}}
-        {{HTML::script('js/easyui/jquery.min.js')}}
-        {{HTML::script('js/easyui/jquery.easyui.min.js')}}
-	<div>你好!{{Auth::user()->name}},{{HTML::linkRoute('logout', '登出')}}</div>
 	<div style="margin:20px 0;">
 		{{ Form::button('获取联系人',['class'=>'easyui-linkbutton','onclick'=>'getSelections()']) }}
 		{{ Form::button('添加联系人',['class'=>'easyui-linkbutton','onclick'=>'addSelections()']) }}
@@ -118,7 +116,6 @@
 
 			
 		}
-	</script>
-
+	</script>	 
 @stop
 

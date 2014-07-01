@@ -1,0 +1,99 @@
+[2014-07-01 02:34:13] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function http_request()' in G:\xampp\htdocs\message\app\routes.php:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-07-01 02:34:51] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function http_request()' in G:\xampp\htdocs\message\app\routes.php:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-07-01 02:36:43] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function https_request()' in G:\xampp\htdocs\message\app\routes.php:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-07-01 02:48:56] production.ERROR: exception 'ErrorException' with message 'Undefined variable: data' in G:\xampp\htdocs\message\app\routes.php:25
+Stack trace:
+#0 G:\xampp\htdocs\message\app\routes.php(25): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'G:\\xampp\\htdocs...', 25, Array)
+#1 [internal function]: {closure}()
+#2 G:\xampp\htdocs\message\bootstrap\compiled.php(5098): call_user_func_array(Object(Closure), Array)
+#3 G:\xampp\htdocs\message\bootstrap\compiled.php(4795): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#4 G:\xampp\htdocs\message\bootstrap\compiled.php(4783): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 G:\xampp\htdocs\message\bootstrap\compiled.php(706): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 G:\xampp\htdocs\message\bootstrap\compiled.php(687): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 G:\xampp\htdocs\message\bootstrap\compiled.php(7425): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 G:\xampp\htdocs\message\bootstrap\compiled.php(8031): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 G:\xampp\htdocs\message\bootstrap\compiled.php(7978): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 G:\xampp\htdocs\message\bootstrap\compiled.php(10747): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 G:\xampp\htdocs\message\bootstrap\compiled.php(648): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 G:\xampp\htdocs\message\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2014-07-01 02:50:12] production.ERROR: exception 'ErrorException' with message 'curl_setopt(): The usage of the @filename API for file uploading is deprecated. Please use the CURLFile class instead' in G:\xampp\htdocs\message\app\routes.php:25
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(8192, 'curl_setopt(): ...', 'G:\\xampp\\htdocs...', 25, Array)
+#1 G:\xampp\htdocs\message\app\routes.php(25): curl_setopt(Resource id #61, 10015, Array)
+#2 [internal function]: {closure}()
+#3 G:\xampp\htdocs\message\bootstrap\compiled.php(5098): call_user_func_array(Object(Closure), Array)
+#4 G:\xampp\htdocs\message\bootstrap\compiled.php(4795): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 G:\xampp\htdocs\message\bootstrap\compiled.php(4783): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 G:\xampp\htdocs\message\bootstrap\compiled.php(706): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 G:\xampp\htdocs\message\bootstrap\compiled.php(687): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 G:\xampp\htdocs\message\bootstrap\compiled.php(7425): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 G:\xampp\htdocs\message\bootstrap\compiled.php(8031): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 G:\xampp\htdocs\message\bootstrap\compiled.php(7978): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 G:\xampp\htdocs\message\bootstrap\compiled.php(10747): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 G:\xampp\htdocs\message\bootstrap\compiled.php(648): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 G:\xampp\htdocs\message\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-07-01 03:01:33] production.ERROR: exception 'ErrorException' with message 'curl_setopt(): The usage of the @filename API for file uploading is deprecated. Please use the CURLFile class instead' in G:\xampp\htdocs\message\app\routes.php:24
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(8192, 'curl_setopt(): ...', 'G:\\xampp\\htdocs...', 24, Array)
+#1 G:\xampp\htdocs\message\app\routes.php(24): curl_setopt(Resource id #61, 10015, Array)
+#2 [internal function]: {closure}()
+#3 G:\xampp\htdocs\message\bootstrap\compiled.php(5098): call_user_func_array(Object(Closure), Array)
+#4 G:\xampp\htdocs\message\bootstrap\compiled.php(4795): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 G:\xampp\htdocs\message\bootstrap\compiled.php(4783): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 G:\xampp\htdocs\message\bootstrap\compiled.php(706): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 G:\xampp\htdocs\message\bootstrap\compiled.php(687): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 G:\xampp\htdocs\message\bootstrap\compiled.php(7425): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 G:\xampp\htdocs\message\bootstrap\compiled.php(8031): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 G:\xampp\htdocs\message\bootstrap\compiled.php(7978): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 G:\xampp\htdocs\message\bootstrap\compiled.php(10747): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 G:\xampp\htdocs\message\bootstrap\compiled.php(648): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 G:\xampp\htdocs\message\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-07-01 03:07:49] production.ERROR: exception 'ErrorException' with message 'curl_setopt(): The usage of the @filename API for file uploading is deprecated. Please use the CURLFile class instead' in G:\xampp\htdocs\message\app\routes.php:25
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(8192, 'curl_setopt(): ...', 'G:\\xampp\\htdocs...', 25, Array)
+#1 G:\xampp\htdocs\message\app\routes.php(25): curl_setopt(Resource id #61, 10015, Array)
+#2 [internal function]: {closure}()
+#3 G:\xampp\htdocs\message\bootstrap\compiled.php(5098): call_user_func_array(Object(Closure), Array)
+#4 G:\xampp\htdocs\message\bootstrap\compiled.php(4795): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 G:\xampp\htdocs\message\bootstrap\compiled.php(4783): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 G:\xampp\htdocs\message\bootstrap\compiled.php(706): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 G:\xampp\htdocs\message\bootstrap\compiled.php(687): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 G:\xampp\htdocs\message\bootstrap\compiled.php(7425): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 G:\xampp\htdocs\message\bootstrap\compiled.php(8031): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 G:\xampp\htdocs\message\bootstrap\compiled.php(7978): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 G:\xampp\htdocs\message\bootstrap\compiled.php(10747): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 G:\xampp\htdocs\message\bootstrap\compiled.php(648): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 G:\xampp\htdocs\message\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-07-01 03:11:51] production.ERROR: exception 'ErrorException' with message 'Object of class stdClass could not be converted to string' in G:\xampp\htdocs\message\app\routes.php:28
+Stack trace:
+#0 G:\xampp\htdocs\message\app\routes.php(28): Illuminate\Exception\Handler->handleError(4096, 'Object of class...', 'G:\\xampp\\htdocs...', 28, Array)
+#1 [internal function]: {closure}()
+#2 G:\xampp\htdocs\message\bootstrap\compiled.php(5098): call_user_func_array(Object(Closure), Array)
+#3 G:\xampp\htdocs\message\bootstrap\compiled.php(4795): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#4 G:\xampp\htdocs\message\bootstrap\compiled.php(4783): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 G:\xampp\htdocs\message\bootstrap\compiled.php(706): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 G:\xampp\htdocs\message\bootstrap\compiled.php(687): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 G:\xampp\htdocs\message\bootstrap\compiled.php(7425): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 G:\xampp\htdocs\message\bootstrap\compiled.php(8031): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 G:\xampp\htdocs\message\bootstrap\compiled.php(7978): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 G:\xampp\htdocs\message\bootstrap\compiled.php(10747): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 G:\xampp\htdocs\message\bootstrap\compiled.php(648): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 G:\xampp\htdocs\message\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2014-07-01 03:30:58] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}', expecting ',' or ';'' in G:\xampp\htdocs\message\app\routes.php:29
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
