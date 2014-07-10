@@ -13,18 +13,36 @@
 
 	# 登录
 	Route::get('upload',function(){
-
-		$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxe3b7e54fe14e212f&secret=0e0d0b26aaf41618e6841b0105b1b58c';
+		//微信多媒体获取ID
+		// $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxe3b7e54fe14e212f&secret=0e0d0b26aaf41618e6841b0105b1b58c';
+		// $ch = curl_init();
+		// curl_setopt($ch, CURLOPT_URL, $url);
+		// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); 
+		// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 
+		// curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		// $output = curl_exec($ch);
+		// curl_close($ch);
+		// $jsoninfo = json_decode($output, true);
+		// $access_token = $jsoninfo["access_token"];
+		// echo $access_token;
+		$xml = file_get_contents('1.xml');
+		$header[]="Content-Type: text/xml; charset=utf-8";
+		$header[]="User-Agent: Apache/1.3.26 (Unix)";
+		$header[]="Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2";
+		$header[]="Connection: keep-alive";
+		$header[]="Content-Length: ".strlen($xml);
+		$url = "http://1.loveunicki.sinaapp.com/index2.php";
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); 
-		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+		curl_setopt($ch, CURLOPT_POST, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		$output = curl_exec($ch);
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		$res = curl_exec($ch);
 		curl_close($ch);
-		$jsoninfo = json_decode($output, true);
-		$access_token = $jsoninfo["access_token"];
-		echo $access_token;
+		header('Content-Type:text/xml; charset=utf-8');
+		echo ($res);
 
 	});
 	Route::get( '/', array('as' => 'getsignin' , 'uses' => 'AuthorityController@getSignin'));

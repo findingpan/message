@@ -97,3 +97,20 @@ Stack trace:
 Stack trace:
 #0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
 #1 {main} [] []
+[2014-07-09 10:01:28] production.ERROR: exception 'ErrorException' with message 'file_get_contents(1.xml): failed to open stream: No such file or directory' in G:\xampp\htdocs\message\app\routes.php:28
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_get_conten...', 'G:\\xampp\\htdocs...', 28, Array)
+#1 G:\xampp\htdocs\message\app\routes.php(28): file_get_contents('1.xml')
+#2 [internal function]: {closure}()
+#3 G:\xampp\htdocs\message\bootstrap\compiled.php(5098): call_user_func_array(Object(Closure), Array)
+#4 G:\xampp\htdocs\message\bootstrap\compiled.php(4795): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 G:\xampp\htdocs\message\bootstrap\compiled.php(4783): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 G:\xampp\htdocs\message\bootstrap\compiled.php(706): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 G:\xampp\htdocs\message\bootstrap\compiled.php(687): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 G:\xampp\htdocs\message\bootstrap\compiled.php(7425): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 G:\xampp\htdocs\message\bootstrap\compiled.php(8031): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#10 G:\xampp\htdocs\message\bootstrap\compiled.php(7978): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#11 G:\xampp\htdocs\message\bootstrap\compiled.php(10747): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#12 G:\xampp\htdocs\message\bootstrap\compiled.php(648): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#13 G:\xampp\htdocs\message\public\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
