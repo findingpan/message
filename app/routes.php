@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,24 +24,32 @@
 		// $jsoninfo = json_decode($output, true);
 		// $access_token = $jsoninfo["access_token"];
 		// echo $access_token;
-		$xml = file_get_contents('1.xml');
-		$header[]="Content-Type: text/xml; charset=utf-8";
-		$header[]="User-Agent: Apache/1.3.26 (Unix)";
-		$header[]="Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2";
-		$header[]="Connection: keep-alive";
-		$header[]="Content-Length: ".strlen($xml);
-		$url = "http://1.loveunicki.sinaapp.com/index2.php";
+		$url = 'http://loveunicki.sinaapp.com/index2.php';
+		$data = array (
+			    "action" => "select",
+			    "tb" => "test",
+			    "fields" => "*",
+			    "arr" => array('name'=>'gggggggggg','text'=>'ghjhjjjjjjjjj'),
+			    "terms" => ""
+			);
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-		curl_setopt($ch, CURLOPT_POST, 1); 
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_HEADER, 0);
-		$res = curl_exec($ch);
+		curl_setopt($ch, CURLOPT_URL, $url); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  //获取数据返回
+		curl_setopt($ch, CURLOPT_POST, 1); //设置为POST传输
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data)); //post数据
+		//select 解析json
+		$output = json_decode(curl_exec($ch),true);
+		// $output = curl_exec($ch);
+		if($output === false){  //判断错误
+		 echo curl_error($ch);
+		}
+		$info = curl_getinfo($ch);  //能够在cURL执行后获取这一请求的有关信息
 		curl_close($ch);
-		header('Content-Type:text/xml; charset=utf-8');
-		echo ($res);
+		//select
+		foreach ($output as $a) {
+			echo $a['name'].'<br/>';
+		};
+		// echo $output;
 
 	});
 	Route::get( '/', array('as' => 'getsignin' , 'uses' => 'AuthorityController@getSignin'));
